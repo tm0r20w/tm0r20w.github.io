@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+	function play(){
+		var answer = Math.floor(Math.random() * 100) + 1;
+		var tryCount = 0;
+		while(true){
+			tryCount++;
+			var userAnswer = prompt('Введите число от 1 до 100. Для выхода нажмите q ');
+			if(userAnswer == 'q')
+				break;
+			userAnswer = parseInt(userAnswer);
+
+			if ( (userAnswer >= 1) && (userAnswer <= 100) )  {
+
+				if (answer == userAnswer) {
+					alert('Вы угадали! Поздравляю!');
+					break;
+				} else if (answer > userAnswer) {
+					alert('Не угадал. Твоё число слишком маленькое.');
+				} else {
+					alert('Не угадал. Твоё число слишком большое.');
+				}
+
+			} else {
+				alert('Ну я же просил, число от 1 до 100!!!');
+			}
+		}
+
+		alert('Игра окончена. Тебе потребовалось ' + tryCount + ' попыток');
+
+	}
+
+</script>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guess-2.html">Угадайка мультиплеер</a></li>
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Игра Угадайка</h2>
+	</div>
+	<div id="content">  
+
+		<p>Я загадала число от 1 до 100. Попробуй угадай!<p/>
+		
+		<p>Правила игры:<p/>
+		
+		<p>У тебя будет неограниченое количество попыток. После каждой попытки ты узнаешь твой ответ больше или меньше загаданого числа.<p/>
+		
+		<p>Цель игры - угадать число за наименьшее число попыток.<p/>
+		
+		<p>Удачи тебе!<p/>				
+
+		</br>
+
+		<input type="button" value="Начать игру" onClick="play()" />
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>
