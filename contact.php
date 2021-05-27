@@ -81,7 +81,7 @@ if(isset($_POST['name']))
 								<li><a href="Folio.html">Folio</a></li>
 								<li><a href="Services.html">Services</a></li>
 								<li><a href="News.html">News</a></li>
-								<li id="active" class="end"><a href="contact.php">Contact</a></li>
+								<li id="active" class="end"><a href="contact.html">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
